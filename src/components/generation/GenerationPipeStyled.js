@@ -76,20 +76,12 @@ const getBgColorForFuel = {
 export const GenerationPipeItemStyled = styled.span`
     color: white;
     display: inline-block;
-    background-color: red;
     transition: all ease 5s;
     width: 0%;
     padding: ${ ({perc}) => perc === 0 ? '0px': '5px'};
     width: ${ ({perc}) => `${perc}%`};
     border-radius: 4px;
     margin: 0 5px;
-    &.hasRainbow{
-        font-size: 100px;
-        background-color: ${ ({fuel}) => {
-            console.log(fuel);
-            console.log(getBgColorForFuel[fuel])
-            return fuel ? getBgColorForFuel[fuel] : 'red'
-        }}
+    background-color: ${ ({fuel, className}) => className && getBgColorForFuel[fuel] ? getBgColorForFuel[fuel]: 'red'
     }
-
 `
