@@ -1,6 +1,7 @@
 import React from 'react';
+import GemerationContainer from './containers/generationContainer';
 
-const App = () => <h1>UK Energy Mix</h1>;
+const App = () => <GemerationContainer />;
 
 export {
     App

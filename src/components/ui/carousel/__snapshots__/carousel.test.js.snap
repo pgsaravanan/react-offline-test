@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should match snapshot 1`] = `
+.c0 {
+  margin: 20px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 1350px;
+  margin-left: -0px;
+}
+
+.c0 li {
+  padding: 0 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.c0 li img {
+  height: 300px;
+  width: 450px;
+}
+
+.c0 li:nth-child(3) img {
+  border: solid 5px black;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    width: 450px;
+    margin-left: -0px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 li img {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+<Carousel
+  data={
+    Object {
+      "hits": Array [
+        Object {
+          "id": 1,
+          "webformatURL": "xyz",
+        },
+        Object {
+          "id": 2,
+          "webformatURL": "xyz1",
+        },
+        Object {
+          "id": 3,
+          "webformatURL": "xyz2",
+        },
+      ],
+    }
+  }
+>
+  <div>
+    <div
+      className="carousel-container"
+    >
+      <styled.ul
+        active={2}
+        index={0}
+      >
+        <ul
+          className="c0"
+        >
+          <li
+            key="1"
+          >
+            <img
+              alt="xyz"
+              src="xyz"
+            />
+          </li>
+          <li
+            key="2"
+          >
+            <img
+              alt="xyz1"
+              src="xyz1"
+            />
+          </li>
+          <li
+            key="3"
+          >
+            <img
+              alt="xyz2"
+              src="xyz2"
+            />
+          </li>
+        </ul>
+      </styled.ul>
+      <div
+        className="carousel-button-wrapper"
+      >
+        <button
+          aria-label="Previous"
+          className="prev"
+          onClick={[Function]}
+        />
+        <button
+          aria-label="Next"
+          className="next"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+</Carousel>
+`;

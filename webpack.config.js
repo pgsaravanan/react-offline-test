@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const host = 'localhost';
-const port = 8080;
+const port = 3000;
 
 module.exports = {
     mode: 'development',
@@ -57,6 +57,14 @@ module.exports = {
     devServer: {
         port,
         host,
-        contentBase: '/src'
+        contentBase: '/src',
+        proxy: {
+            '/api': {
+              target: 'https://api.carbonintensity.org.uk',
+              changeOrigin: true,
+              secure: true,
+              pathRewrite: { '^/api': '' }
+            }
+        }
     },
 };
