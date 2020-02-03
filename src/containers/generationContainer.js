@@ -3,7 +3,7 @@ import Loaders from '../components/Loaders/loaders';
 import { Generation } from '../components/generation/generation';
 import { dataFetchHooks } from '../store/customHooks/dataFetchHooks';
 
-const GemerationContainer = () => {
+const GenerationContainer = () => {
   const { data, loading } = dataFetchHooks('generation');
 
   return (
@@ -16,4 +16,4 @@ const GemerationContainer = () => {
   );
 };
 
-export default GemerationContainer;
+export default GenerationContainer;
